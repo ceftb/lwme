@@ -1,0 +1,66 @@
+version: "3"
+
+services:
+
+  # Site 1 - IoT ==============================================================
+
+  # MinnowBoards
+  minnow0:
+    image: fedora:latest
+    command: sleep infinity
+  minnow1:
+    image: fedora:latest
+    command: sleep infinity
+  minnow2:
+    image: fedora:latest
+    command: sleep infinity
+
+  # Raspberry Pis
+  rpi0:
+    image: debian:latest
+    command: sleep infinity
+  rpi1:
+    image: debian:latest
+    command: sleep infinity
+  rpi2:
+    image: debian:latest
+    command: sleep infinity
+  
+  # Site 2 - Emulation ========================================================
+
+  # Node emulation nodes
+  nodemu0:
+    image: busybox:glibc
+    command: tail -f /dev/null
+  nodemu1:
+    image: busybox:glibc
+    command: tail -f /dev/null
+  nodemu2:
+    image: busybox:glibc
+    command: tail -f /dev/null
+
+  # Network emulation nodes
+  netmu0:
+    image: centos:latest
+    command: sleep infinity
+  netmu1:
+    image: centos:latest
+    command: sleep infinity
+  netmu2:
+    image: centos:latest
+    command: sleep infinity
+
+  # Site 3 - Cellular =========================================================
+
+  # Androids
+  droid0:
+    image: ubuntu:latest
+    command: sleep infinity
+  droid1:
+    image: ubuntu:latest
+    command: sleep infinity
+  droid2:
+    image: ubuntu:latest
+    command: sleep infinity
+
+  
