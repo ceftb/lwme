@@ -57,7 +57,7 @@ services:
   # Androids
   droid0:
     image: ubuntu:latest
-    command: sleep infinity
+    command: apt-get update
   droid1:
     image: ubuntu:latest
     command: sleep infinity
