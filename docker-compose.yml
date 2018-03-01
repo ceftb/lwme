@@ -6,7 +6,9 @@ services:
 
   # MinnowBoards
   minnow0:
-    image: fedora:latest
+    build:
+      dockerfile: custom.dock
+      context: .
     command: sleep infinity
   minnow1:
     image: fedora:latest
